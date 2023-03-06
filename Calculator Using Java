@@ -1,0 +1,83 @@
+// Calculator using Java
+
+import java.io.IOException;
+import java.util.Scanner;
+public class Calculator {
+
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void addition()
+	{
+		System.out.println("Enter Two Numbers :");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		
+		System.out.println("Result : "+num1+" + "+num2+" = "+(num1+num2));
+	}
+
+	public static void subtraction()
+	{
+		System.out.println("Enter Two Numbers :");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		
+		System.out.println("Result : "+num1+" - "+num2+" = "+(num1-num2));
+	}
+
+	public static void multiplication()
+	{
+		System.out.println("Enter Two Numbers :");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		
+		System.out.println("Result : "+num1+" x "+num2+" = "+(num1*num2));
+	}
+	
+	public static void division()
+	{
+		System.out.println("Enter Two Numbers :");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		
+		System.out.println("Result : "+num1+" / "+num2+" = "+(num1/num2));
+	}
+	
+	public static void main(String[] args) throws IOException{
+		// TODO Auto-generated method stub
+		
+		int repeat;
+		
+		while(true)
+		{
+		
+			System.out.println("Select Operation to perform :");
+			System.out.println("1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n");
+			System.out.println("Enter Choice(1/2/3/4) :");
+			
+			int ch = sc.nextInt();
+			
+			switch(ch)
+			{
+				case 1 : addition();
+						 break;
+						 
+				case 2 : subtraction();
+						 break;
+						 
+				case 3 : multiplication();
+						 break;
+						 
+				case 4 : division();
+						 break;
+						 
+			    default : System.out.println("Invalid Choice...! Please between 1/2/3/4");
+			}
+			
+			System.out.println("\nDo you again want to perform operation (Yes=1 / No=0):");
+			repeat = sc.nextInt();
+			if(repeat==0)
+				break;
+		}
+	}
+
+}
